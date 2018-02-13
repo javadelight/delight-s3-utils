@@ -7,5 +7,19 @@ Utilities for working with the S3 API in Java.
 Empty and then delete a bucket:
 
 ```java
+
+AWSCredentials credentials = new AWSCredentials() {
+	@Override
+	public getAWSAccessKeyId() {
+		return "awsAccessKey";
+	}
+	
+	@Override
+	public getAWSSecretKey() {
+		return "awsSecretKey";
+	}
+	
+};
+
 S3Utils.deleteBucket(region, bucketName, awsCredentials);
 ```
